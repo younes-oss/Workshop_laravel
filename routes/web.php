@@ -7,3 +7,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get ('/index',[ PostController::class,'index'])->name ('index');
+Route::post ('/store',[ PostController::class,'store'])->name ('poste.Store');

@@ -14,7 +14,7 @@ class PostController extends Controller
     {
         //
         $posts = Post::all();
-        return view('index' , compact ('posts'));
+        return view('posts.index', compact('posts'));
     }
 
     /**
@@ -22,15 +22,21 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request , $id)
     {
-        //
+        Post::create([
+            'discription' => $request->discription,
+            'user_id' =>$id,
+            'title' =>$request->title
+        
+        ]);
+       return redirect()->route('index');
     }
 
     /**
@@ -46,7 +52,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        
     }
 
     /**
