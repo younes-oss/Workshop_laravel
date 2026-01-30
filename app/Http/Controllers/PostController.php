@@ -14,7 +14,7 @@ class PostController extends Controller
     {
         //
         $posts = Post::all();
-        return view('index' , compact ('posts'));
+        return view('post.index', compact('posts'));
     }
 
     /**
@@ -22,7 +22,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('post.create');
     }
 
     /**
@@ -44,10 +44,7 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Post $post)
-    {
-        //
-    }
+    public function edit(Post $post) {}
 
     /**
      * Update the specified resource in storage.
