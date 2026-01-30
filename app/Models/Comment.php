@@ -13,8 +13,8 @@ class Comment extends Model
         'user_id',
         'discription',
     ];
-    public function user()
+    public function posts()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Post::class);
     }
 }

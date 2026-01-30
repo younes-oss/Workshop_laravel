@@ -33,7 +33,7 @@ class PostController extends Controller
     {
         Post::create([
             'discription' => $request->discription,
-            'user_id' =>$request->userId,
+            
             'title' =>$request->title
         
         ]);

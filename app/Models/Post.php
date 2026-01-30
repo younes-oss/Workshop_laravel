@@ -14,8 +14,9 @@ class Post extends Model
         'discription',
         'title',
     ];
-    public function user()
+    
+    public function comments()
     {
-        return $this->belongsTo(User::class);
+        return $this->hasMany(Comment::class);
     }
 }

@@ -44,7 +44,7 @@
                         required
                     >
                 </div>
-                <input typr="hidden" value='1' name="userId" >
+                
 
                 <!-- Body Textarea -->
                 <div class="mb-6">
