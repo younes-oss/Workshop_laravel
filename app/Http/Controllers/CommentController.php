@@ -21,14 +21,21 @@ class CommentController extends Controller
     public function create()
     {
         //
+
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request , $id)
     {
         //
+        Comment::create ([
+         'post_id' => $id,
+         'discription' => $request->discription,
+        ]
+        );
+        return redirect()->route('index');
     }
 
     /**

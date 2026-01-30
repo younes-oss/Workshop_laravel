@@ -69,15 +69,16 @@
         <!-- Leave a Comment Form -->
         <section class="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
             <h3 class="text-xl font-semibold text-gray-900 mb-6">Leave a Comment</h3>
-            <form action="<!-- FORM_ACTION_TO_STORE_COMMENT -->" method="POST">
+            <form action="{{route ('comment.Store', $selectedPost->id)}}" method="POST">
                 <!-- CSRF_TOKEN -->
+                 @csrf
                 <div class="mb-6">
                     <label for="body" class="block text-sm font-medium text-gray-700 mb-2">
                         Your Comment
                     </label>
                     <textarea 
                         id="body" 
-                        name="body" 
+                        name="discription" 
                         rows="5" 
                         class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent resize-none"
                         placeholder="Share your thoughts..."

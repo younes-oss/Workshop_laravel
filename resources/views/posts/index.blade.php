@@ -48,14 +48,17 @@
                         View →
                     </a>
                 </div>
-                @endforeach
+
+                  </article>
+              
                 <!-- Posts Feed -->
 
-            </article>
+          
             <!-- POST_CARD_END -->
 
             <!-- REPEAT_POST_CARD_FOR_EACH_POST -->
         </div>
+          @endforeach
 
         <!-- Empty State (if no posts) -->
         <div class="text-center py-12 bg-white rounded-lg border border-gray-200">

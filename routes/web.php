@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -10,3 +11,4 @@ Route::get ('/index',[ PostController::class,'index'])->name ('index');
 Route::post ('/store',[ PostController::class,'store'])->name ('poste.Store');
 Route::get('create', [PostController::class, 'create'])->name('create.post');
 Route::get('show/{id}', [PostController::class, 'show'])->name('posts.show');
+Route::post ('/store/{id}',[CommentController ::class,'store'])->name ('comment.Store');
