@@ -22,17 +22,17 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('post.create');
+        return view('posts.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request , $id)
+    public function store(Request $request )
     {
         Post::create([
             'discription' => $request->discription,
-            'user_id' =>$id,
+            'user_id' =>$request->userId,
             'title' =>$request->title
         
         ]);

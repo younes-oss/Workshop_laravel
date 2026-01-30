@@ -29,7 +29,7 @@
             
             <form action="{{ route('poste.Store') }}" method="POST">
                 <!-- CSRF_TOKEN -->
-                
+                @CSRF
                 <!-- Title Input -->
                 <div class="mb-6">
                     <label for="title" class="block text-sm font-medium text-gray-700 mb-2">
@@ -44,6 +44,7 @@
                         required
                     >
                 </div>
+                <input typr="hidden" value='1' name="userId" >
 
                 <!-- Body Textarea -->
                 <div class="mb-6">

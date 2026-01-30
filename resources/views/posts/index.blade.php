@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@
         }
     </style>
 </head>
+
 <body class="bg-gray-50 min-h-screen">
     <div class="max-w-4xl mx-auto px-4 py-12">
         <!-- Header -->
@@ -24,29 +26,31 @@
 
         <!-- Create Post Button -->
         <div class="mb-8">
-            <a href="." class="inline-block bg-gray-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors">
+            <a href="create" class="inline-block bg-gray-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors">
                 Create New Post
             </a>
         </div>
-
-        <!-- Posts Feed -->
+        @foreach ($posts as $post)
         <div class="space-y-6">
             <!-- POST_CARD_START -->
             <article class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow">
                 <h2 class="text-xl font-semibold text-gray-900 mb-3">
-                    <!-- POST_TITLE -->
+                   {{ $post->title }}
                 </h2>
                 <p class="text-gray-700 mb-4 line-clamp-3">
-                    <!-- POST_BODY_SNIPPET -->
+                    {{ $post->discription }}
                 </p>
                 <div class="flex items-center justify-between">
                     <span class="text-sm text-gray-500">
-                        <!-- POST_CREATED_AT -->
+                        {{ $post->created_at }}
                     </span>
                     <a href="<!-- LINK_TO_POST_SHOW -->" class="text-gray-900 font-medium hover:text-gray-700 transition-colors">
                         View →
                     </a>
                 </div>
+                @endforeach
+                <!-- Posts Feed -->
+
             </article>
             <!-- POST_CARD_END -->
 
@@ -60,5 +64,5 @@
         <!-- END_EMPTY_STATE -->
     </div>
 </body>
-</html>
 
+</html>
