@@ -24,7 +24,7 @@
 
         <!-- Create Post Button -->
         <div class="mb-8">
-            <a href="<!-- LINK_TO_CREATE_POST -->" class="inline-block bg-gray-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors">
+            <a href="." class="inline-block bg-gray-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors">
                 Create New Post
             </a>
         </div>
