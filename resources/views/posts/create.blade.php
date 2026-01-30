@@ -18,7 +18,7 @@
     <div class="max-w-2xl mx-auto px-4 py-12">
         <!-- Back to Posts Link -->
         <div class="mb-6">
-            <a href="<!-- LINK_TO_POSTS_INDEX -->" class="text-gray-600 hover:text-gray-900 transition-colors">
+            <a href="/index" class="text-gray-600 hover:text-gray-900 transition-colors">
                 ← Back to Posts
             </a>
         </div>

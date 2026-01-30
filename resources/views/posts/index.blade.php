@@ -44,7 +44,7 @@
                     <span class="text-sm text-gray-500">
                         {{ $post->created_at }}
                     </span>
-                    <a href="<!-- LINK_TO_POST_SHOW -->" class="text-gray-900 font-medium hover:text-gray-700 transition-colors">
+                    <a href="{{route ('posts.show',$post->id)}}" class="text-gray-900 font-medium hover:text-gray-700 transition-colors">
                         View →
                     </a>
                 </div>

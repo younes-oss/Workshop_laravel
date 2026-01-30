@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Pest\Support\View;
 
 class PostController extends Controller
 {
@@ -42,9 +43,12 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Post $post)
+    public function show(Post $post , $id)
     {
         //
+        $selectedPost = Post::find($id);
+        return view('posts.show' , compact ('selectedPost'));
+
     }
 
     /**
