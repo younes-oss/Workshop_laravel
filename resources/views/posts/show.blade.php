@@ -18,7 +18,7 @@
     <div class="max-w-4xl mx-auto px-4 py-12">
         <!-- Back to Posts Link -->
         <div class="mb-6">
-            <a href="<!-- LINK_TO_POSTS_INDEX -->" class="text-gray-600 hover:text-gray-900 transition-colors">
+            <a href="/index" class="text-gray-600 hover:text-gray-900 transition-colors">
                 ← Back to Posts
             </a>
         </div>
@@ -27,12 +27,15 @@
         <article class="bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8">
             <h1 class="text-3xl font-semibold text-gray-900 mb-4">
                 <!-- POST_TITLE -->
+                 {{$selectedPost->title}}
             </h1>
             <div class="text-sm text-gray-500 mb-6">
                 <!-- POST_CREATED_AT -->
+                 {{$selectedPost->created_at}}
             </div>
             <div class="text-gray-700 leading-relaxed whitespace-pre-wrap">
                 <!-- POST_BODY -->
+                 {{$selectedPost->discription}}
             </div>
         </article>
 
